@@ -1,0 +1,61 @@
+# ==============================================================================
+# .gitignore - CanStyling Backend & Web Services (Protección de Secretos y Build)
+# ==============================================================================
+
+# 1. Variables de Entorno y Credenciales Sensibles (NUNCA subir a GitHub)
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+*.p12
+
+# 2. Archivos de Compilación y Empaquetado Java / Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# 3. Binarios compilados
+*.class
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# 4. Logs del Sistema y Servidores
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 5. Entornos de Desarrollo (IDEs)
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+.classpath
+.project
+.settings/
+bin/
+
+# 6. Archivos del Sistema Operativo
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# 7. Dependencias y Builds Front-End (si aplica)
+node_modules/
+dist/
+build/
+.cache/

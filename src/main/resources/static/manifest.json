@@ -1,0 +1,21 @@
+{
+  "short_name": "CanStyling",
+  "name": "CanStyling - Centro de Estética & Peluquería Canina",
+  "icons": [
+    {
+      "src": "./logo-navbar.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "./logo-navbar.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "./index.html",
+  "background_color": "#FBF7EE",
+  "theme_color": "#2563EB",
+  "display": "standalone",
+  "orientation": "portrait"
+}
