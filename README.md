@@ -101,10 +101,9 @@ Desde la interfaz web es posible probar los módulos y servicios web del aplicat
 * Módulos de facturación, inventario y catálogo de servicios.
 
 ### 5. Credenciales de Acceso para Pruebas
-
-Para facilitar la evaluación, en la parte inferior (pie de página / footer) de la pantalla principal de inicio (Home) se encuentran listadas las cuentas de prueba disponibles con sus respectivos roles y accesos directos:
+en la parte inferior (pie de página / footer) de la pantalla principal de inicio (Home) se encuentran listadas las cuentas de prueba disponibles con sus respectivos roles y accesos directos:
 
 * Usuario Administrador: admin@canstyling.com / Contraseña: Admin123*
-* Usuario Recepción: recepcion@canstyling.com / Contraseña: Admin123*
-* Usuario Estilista: mateo.estilista@canstyling.com / Contraseña: Admin123*
-* Usuario Cliente: laura.martinez@gmail.com / Contraseña: Admin123*
+* Usuario Recepción: recepcion@canstyling.com / Contraseña:  Password123*
+* Usuario Estilista: mateo.estilista@canstyling.com / Contraseña:  Password123*
+* Usuario Cliente: laura.martinez@gmail.com / Contraseña:  Password123*
