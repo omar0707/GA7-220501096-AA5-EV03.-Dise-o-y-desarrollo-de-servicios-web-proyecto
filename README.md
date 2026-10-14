@@ -56,19 +56,5 @@ GA7-220501096-AA5-EV03_Diseno_Desarrollo_Servicios_Web_Proyecto/
 
 ---
 
-## 3. Instrucciones de Ejecución y Verificación
 
-###  A. Ejecución de la Aplicación Web (Front-End)
-1. Abre en tu navegador web el archivo:  
-    [`web/index.html`](file:///d:/proyecto%20sena/guia%207%20adonay/GA7-220501096-AA5-EV03_Diseno_Desarrollo_Servicios_Web_Proyecto/web/index.html)
-2. Interactúa con las pestañas de **Dashboard**, **Registro Web**, **Bot WhatsApp**, **Clientes**, **Citas**, **Inventario** y **POS Facturación**.
 
-###  B. Ejecución de las Pruebas Backend (Consola Java)
-1. Abre una terminal en este directorio y ejecuta:
-   ```powershell
-   java -cp target/classes com.canstyling.ProyectoApiTester
-   ```
-2. Observa la validación exitosa de los 6 módulos de servicios web.
-
-###  C. Publicación en GitHub
-Sigue la guía detallada en [GUIA_SUBIR_A_GITHUB.md](file:///d:/proyecto%20sena/guia%207%20adonay/GA7-220501096-AA5-EV03_Diseno_Desarrollo_Servicios_Web_Proyecto/GUIA_SUBIR_A_GITHUB.md).
