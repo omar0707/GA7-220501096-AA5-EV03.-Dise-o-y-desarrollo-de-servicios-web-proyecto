@@ -58,3 +58,53 @@ GA7-220501096-AA5-EV03_Diseno_Desarrollo_Servicios_Web_Proyecto/
 
 
 
+
+## Instrucciones de Despliegue y Pruebas (Local y GitHub Codespaces)
+
+### 1. Preparación del Entorno y Base de Datos
+
+1. Copiar el archivo de variables de entorno base:
+   cp .env.example .env
+
+2. Iniciar el servicio de base de datos MySQL e importar los esquemas requeridos:
+   sudo service mysql start
+   sudo mysql < database/01_schema_completo_canstyling.sql
+   sudo mysql -e "USE peluqueria_canina_db; ALTER TABLE usuarios MODIFY COLUMN canal_registro VARCHAR(50);"
+   sudo mysql < database/02_seed_completo.sql
+
+### 2. Ejecución del Servidor Backend
+
+Compilar el proyecto e iniciar la aplicación con Maven:
+   mvn clean spring-boot:run
+
+### 3. Consideraciones Críticas de Enrutamiento y Acceso Web
+
+El backend implementa un context-path a nivel de servlet configurado en el prefijo /api (server.servlet.context-path=/api).
+
+Debido a esta configuración:
+* Cualquier intento de acceso a la raíz (http://localhost:8080/ o http://localhost:8080/index.html) resultará en un error HTTP 404 - Not Found.
+* Para visualizar correctamente el frontend y los servicios web, es mandatorio acceder incluyendo el prefijo del contexto:
+
+* URL Local:
+  http://localhost:8080/api/ (o http://localhost:8080/api/index.html)
+
+* URL en GitHub Codespaces:
+  Configurar el puerto 8080 con visibilidad Pública (Public) en la pestaña de Puertos de VS Code y acceder a la URL asignada añadiendo la ruta del servlet:
+  https://<id-codespace>-8080.app.github.dev/api/
+
+### 4. Funcionalidades del Sistema y Pruebas Disponibles
+
+Desde la interfaz web es posible probar los módulos y servicios web del aplicativo:
+* Registro y administración de clientes (nombre, teléfono, correo, canal de registro).
+* Registro de mascotas asociadas a clientes.
+* Agendamiento y gestión de citas para servicios de peluquería y estética canina.
+* Módulos de facturación, inventario y catálogo de servicios.
+
+### 5. Credenciales de Acceso para Pruebas
+
+Para facilitar la evaluación, en la parte inferior (pie de página / footer) de la pantalla principal de inicio (Home) se encuentran listadas las cuentas de prueba disponibles con sus respectivos roles y accesos directos:
+
+* Usuario Administrador: admin@canstyling.com / Contraseña: Admin123*
+* Usuario Recepción: recepcion@canstyling.com / Contraseña: Admin123*
+* Usuario Estilista: mateo.estilista@canstyling.com / Contraseña: Admin123*
+* Usuario Cliente: laura.martinez@gmail.com / Contraseña: Admin123*
